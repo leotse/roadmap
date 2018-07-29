@@ -23,6 +23,7 @@
     "preact-cli": "^2.0.0"
   },
   "dependencies": {
+    "fetch": "^1.1.0",
     "history": "^4.7.2",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0",

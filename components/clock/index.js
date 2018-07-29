@@ -18,7 +18,7 @@ export default class Clock extends Component {
 	render() {
 		const timeString = this.state.time.toLocaleTimeString();
 		return (
-			<span>Now: {timeString}</span>
+			<span>Time: {timeString}</span>
 		);
 	}
 }

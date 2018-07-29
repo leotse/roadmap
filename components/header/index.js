@@ -1,13 +1,14 @@
+import { Link } from 'preact-router/match';
 import style from './style';
 
 export default () => (
 	<header class={style.header}>
-		<a href="https://www.codewithchris.com/">
+		<Link href="/">
 			<img class={style.logo}
 				src="/assets/logo.png"
 				alt="How to Make an App for Beginners - Code With Chris"
 			/>
-		</a>
+		</Link>
 		<nav>
 			<ul>
 				<li><a href="https://codewithchris.com/how-to-make-an-iphone-app/">Start Here</a></li>

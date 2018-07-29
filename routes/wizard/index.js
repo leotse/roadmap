@@ -1,3 +1,8 @@
+import style from './style';
+import Wizard from '../../components/wizard';
+
 export default () => (
-	<div>WIZARD</div>
+	<div class={style.wizard}>
+		<Wizard steps={5} />
+	</div>
 );
