@@ -1,0 +1,14 @@
+.header nav {
+    float: right;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header ul li {
+    float: left;
+    padding-left: 10px;
+}
