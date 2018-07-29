@@ -7,11 +7,14 @@
     margin: auto;
     background-color: #30A1F3;
     border: none;
-    color: white;
     padding: 25px 50px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 48px;
     border-radius: 8px;
     cursor: pointer;
+    text-align: center;
+    font-size: 48px;
+}
+
+.getstarted a {
+    color: white;
+    text-decoration: none;
 }

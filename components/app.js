@@ -1,15 +1,19 @@
+import { Router } from 'preact-router';
+import { createHashHistory } from 'history';
+
+import Home from '../routes/home';
+import Wizard from '../routes/wizard';
+
 import Header from './header';
-import Headline from './headline';
-import GetStarted from './getstarted';
-import MoreInfo from './moreinfo';
 import Clock from './clock';
 
 export default () => (
 	<main>
 		<Header />
-		<Headline />
-		<GetStarted />
-		<MoreInfo />
+		<Router history={createHashHistory()}>
+			<Home path="/" />
+			<Wizard path="/wizard" />
+		</Router>
 		<Clock />
 	</main>
 );
