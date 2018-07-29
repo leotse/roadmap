@@ -2,9 +2,9 @@ import style from './style';
 
 export default () => (
 	<header class={style.header}>
-		<a class="logo" href="https://www.codewithchris.com/">
-			<img
-				src="https://codewithchris-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/boldlogov2.png"
+		<a href="https://www.codewithchris.com/">
+			<img class={style.logo}
+				src="/assets/logo.png"
 				alt="How to Make an App for Beginners - Code With Chris"
 			/>
 		</a>

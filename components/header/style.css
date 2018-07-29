@@ -1,5 +1,24 @@
+.header {
+    background: linear-gradient(141deg, #13669e 0%, #4d6ca5 51%, #1290ce 75%);
+    background-color: #13669e;
+}
+
+.header .logo {
+    max-width: 100px;
+    padding: 25px;
+}
+
+.header a,
+.header a:active {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+}
+
 .header nav {
     float: right;
+    padding: 50px 25px;
 }
 
 .header ul {
