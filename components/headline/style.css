@@ -1,0 +1,15 @@
+.headline {
+    background: #000000;
+}
+
+.headline h1 {
+    color: #ffffff;
+    margin: auto;
+    text-align: center;
+}
+
+.headline video {
+    display: block;
+    margin: 0px auto;
+    width: 800px;
+}

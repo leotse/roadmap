@@ -17,5 +17,6 @@ export default () => (
 				<li><a href="https://codewithchris.com/mygear/">Tools</a></li>
 			</ul>
 		</nav>
+		<div class={style.clear} />
 	</header>
 );
