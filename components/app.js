@@ -1,16 +1,15 @@
 import Header from './header';
 import Headline from './headline';
 import GetStarted from './getstarted';
+import MoreInfo from './moreinfo';
 import Clock from './clock';
 
 export default () => (
-	<div>
+	<main>
 		<Header />
 		<Headline />
 		<GetStarted />
-		{/*
-			<MoreInfo />
-		*/}
+		<MoreInfo />
 		<Clock />
-	</div>
+	</main>
 );
