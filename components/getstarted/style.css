@@ -1,0 +1,17 @@
+.getstarted {
+    margin-top: 25px;
+}
+
+.getstarted button {
+    display: block;
+    margin: auto;
+    background-color: #30A1F3;
+    border: none;
+    color: white;
+    padding: 25px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 48px;
+    border-radius: 8px;
+    cursor: pointer;
+}
