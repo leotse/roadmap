@@ -5,7 +5,7 @@ export default () => (
 	<header class={style.header}>
 		<Link href="/">
 			<img class={style.logo}
-				src="/assets/logo.png"
+				src="assets/logo.png"
 				alt="How to Make an App for Beginners - Code With Chris"
 			/>
 		</Link>
