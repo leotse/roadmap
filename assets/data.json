@@ -1,137 +1,130 @@
 {
-    "version": "1.0.0",
-    "questions": {
-        "q1": {
-            "type": "single",
-            "image": "/img/test.jpg",
-            "headline": "Does your app use a tab bar?",
-            "subline": "",
-            "answers": [
-                {
-                    "priority": 1,
-                    "headline": "Yes",
-                    "subline": "",
-                    "recommendations": [
-                        "r1",
-                        "r2"
-                    ],
-                    "image": "/img/test.jpg"
-                },
-                {
-                    "priority": 2,
-                    "headline": "No",
-                    "subline": "",
-                    "recomendations": [],
-                    "image": "/img/test.jpg"
-                }
-            ]
+  "version": "1.0.0",
+  "questions": {
+    "q1": {
+      "type": "single",
+      "image": "/img/test.jpg",
+      "headline": "Does your app use a tab bar?",
+      "subline": "",
+      "answers": [
+        {
+          "priority": 1,
+          "headline": "Yes",
+          "subline": "",
+          "recommendations": ["r1", "r2"],
+          "image": "/img/test.jpg"
         },
-        "q2": {
-            "type": "multi",
-            "image": "/img/test.jpg",
-            "headline": "Does your app use user interface elements?",
-            "subline": "Select all that apply:",
-            "answers": [
-                {
-                    "priority": 1,
-                    "headline": "Labels",
-                    "subline": "",
-                    "recommendations": [
-                        "r4"
-                    ],
-                    "image": "/img/test.jpg"
-                },
-                {
-                    "priority": 2,
-                    "headline": "Buttons",
-                    "subline": "",
-                    "recommendations": [
-                        "r5"
-                    ],
-                    "image": "/img/test.jpg"
-                },
-                {
-                    "priority": 3,
-                    "headline": "Images",
-                    "subline": "",
-                    "recommendations": [
-                        "r6"
-                    ],
-                    "image": "/img/test.jpg"
-                },
-                {
-                    "priority": 4,
-                    "headline": "Sliders",
-                    "subline": "",
-                    "recommendations": [
-                        "r7"
-                    ],
-                    "image": "/img/test.jpg"
-                }
-            ]
+        {
+          "priority": 2,
+          "headline": "No",
+          "subline": "",
+          "recommendations": ["r2"],
+          "image": "/img/test.jpg"
         }
+      ]
     },
-    "recommendations": {
-        "r1": {
-            "priority": 1,
-            "group": "g1",
-            "image": "/img/test.jpg",
-            "headline": "Local Database",
-            "subline": "You’ll need a local database <i>if</i> it’s a lot of data. There are several options available.",
-            "link": [
-                {
-                    "anchor": "Realm Database",
-                    "link": "https://realm.io"
-                }
-            ]
+    "q2": {
+      "type": "multi",
+      "image": "/img/test.jpg",
+      "headline": "Does your app use user interface elements?",
+      "subline": "Select all that apply:",
+      "answers": [
+        {
+          "priority": 1,
+          "headline": "Labels",
+          "subline": "",
+          "recommendations": ["r4"],
+          "image": "/img/test.jpg"
         },
-        "r2": {
-            "priority": 1,
-            "group": "g2",
-            "image": "/img/test.jpg",
-            "headline": "UILabel",
-            "subline": "This is the class to display a piece of text.",
-            "link": [
-                {
-                    "anchor": "Documentation",
-                    "link": "https://developer.apple.com/documentation/uikit/uilabel?changes=_2"
-                },
-                {
-                    "anchor": "Documentation 2",
-                    "link": "https://blahblahblah"
-                }
-            ]
+        {
+          "priority": 2,
+          "headline": "Buttons",
+          "subline": "",
+          "recommendations": ["r3"],
+          "image": "/img/test.jpg"
         },
-        "r3": {
-            "priority": 2,
-            "group": "g2",
-            "image": "/img/test.jpg",
-            "headline": "UIButton",
-            "subline": "This is the class for a button.",
-            "link": [
-                {
-                    "anchor": "Documentation",
-                    "link": "https://developer.apple.com/documentation/uikit/uibutton?changes=_4"
-                },
-                {
-                    "anchor": "Documentation 2",
-                    "link": "https://blahblahblah"
-                }
-            ]
+        {
+          "priority": 3,
+          "headline": "Images",
+          "subline": "",
+          "recommendations": ["r6"],
+          "image": "/img/test.jpg"
+        },
+        {
+          "priority": 4,
+          "headline": "Sliders",
+          "subline": "",
+          "recommendations": ["r7"],
+          "image": "/img/test.jpg"
         }
-    },
-    "groups": {
-        "g1": {
-            "priority": 1,
-            "image": "/img/test.jpg",
-            "headline": "Databases",
-            "subline": "Databases are almost a must for any complex app."
-        },
-        "g2": {
-            "priority": 2,
-            "image": "/img/test.jpg",
-            "headline": "UIKit",
-            "subline": "Apple's framework for out of the box UI controls. <br/><br/>Their documentation is right <a href=\"https://developer.apple.com/documentation/uikit\">here</a>."
-        }
+      ]
     }
+  },
+  "recommendations": {
+    "r1": {
+      "priority": 1,
+      "group": "g1",
+      "image": "/img/test.jpg",
+      "headline": "Local Database",
+      "subline":
+        "You’ll need a local database <i>if</i> it’s a lot of data. There are several options available.",
+      "link": [
+        {
+          "anchor": "Realm Database",
+          "link": "https://realm.io"
+        }
+      ]
+    },
+    "r2": {
+      "priority": 1,
+      "group": "g2",
+      "image": "/img/test.jpg",
+      "headline": "UILabel",
+      "subline": "This is the class to display a piece of text.",
+      "link": [
+        {
+          "anchor": "Documentation",
+          "link":
+            "https://developer.apple.com/documentation/uikit/uilabel?changes=_2"
+        },
+        {
+          "anchor": "Documentation 2",
+          "link": "https://blahblahblah"
+        }
+      ]
+    },
+    "r3": {
+      "priority": 2,
+      "group": "g2",
+      "image": "/img/test.jpg",
+      "headline": "UIButton",
+      "subline": "This is the class for a button.",
+      "link": [
+        {
+          "anchor": "Documentation",
+          "link":
+            "https://developer.apple.com/documentation/uikit/uibutton?changes=_4"
+        },
+        {
+          "anchor": "Documentation 2",
+          "link": "https://blahblahblah"
+        }
+      ]
+    }
+  },
+  "groups": {
+    "g1": {
+      "priority": 1,
+      "image": "/img/test.jpg",
+      "headline": "Databases",
+      "subline": "Databases are almost a must for any complex app."
+    },
+    "g2": {
+      "priority": 2,
+      "image": "/img/test.jpg",
+      "headline": "UIKit",
+      "subline":
+        "Apple's framework for out of the box UI controls. <br/><br/>Their documentation is right <a href=\"https://developer.apple.com/documentation/uikit\">here</a>."
+    }
+  }
 }

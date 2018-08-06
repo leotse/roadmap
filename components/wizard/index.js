@@ -5,8 +5,12 @@ import Result from "./result";
 export default class Wizard extends Component {
   constructor() {
     super();
-    this.state = { step: 0, answers: [] };
     this.onAnswered = this.onAnswered.bind(this);
+    this.state = {
+      step: 0,
+      answers: [],
+      recommendations: []
+    };
   }
 
   componentWillUpdate(props, state) {
@@ -21,9 +25,12 @@ export default class Wizard extends Component {
   }
 
   onAnswered(answer) {
-    const answers = this.state.answers;
+    const recommendations = answer.recommendations
+      .map(rkey => this.props.recommendations[rkey])
+      .filter(r => !!r);
     this.setState({
-      answers: [...answers, answer]
+      answers: [...this.state.answers, answer],
+      recommendations: [...this.state.recommendations, ...recommendations]
     });
     this.next();
   }
@@ -45,7 +52,10 @@ export default class Wizard extends Component {
           <Step question={this.question} onSelect={this.onAnswered} />
         ) : null}
         {this.state.step >= this.props.steps ? (
-          <Result answers={this.state.answers} />
+          <Result
+            answers={this.state.answers}
+            recommendations={this.state.recommendations}
+          />
         ) : null}
       </div>
     );
