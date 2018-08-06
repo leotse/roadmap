@@ -1,10 +1,10 @@
 {
-    "plugins": [
-        [
-            "transform-react-jsx",
-            {
-                "pragma": "preact.h"
-            }
-        ]
+  "plugins": [
+    [
+      "transform-react-jsx",
+      {
+        "pragma": "preact.h"
+      }
     ]
+  ]
 }

@@ -1,33 +1,53 @@
-import { Component } from 'preact';
+import { Component } from "preact";
+import Step from "./step";
+import Result from "./result";
 
 export default class Wizard extends Component {
+  constructor() {
+    super();
+    this.state = { step: 0, answers: [] };
+    this.onAnswered = this.onAnswered.bind(this);
+  }
 
-	onNext() {
-		const step = this.state.step;
-		this.setState({
-			step: step + 1
-		});
-	}
+  componentWillUpdate(props, state) {
+    const questions = props.questions;
+    const questionKeys = Object.keys(questions);
+    const numQuestions = questionKeys.length;
+    if (numQuestions > 0) {
+      const key = questionKeys[state.step];
+      const question = questions[key];
+      this.question = question;
+    }
+  }
 
-	constructor({ steps }) {
-		super();
+  onAnswered(answer) {
+    const answers = this.state.answers;
+    this.setState({
+      answers: [...answers, answer]
+    });
+    this.next();
+  }
 
-		this.steps = steps;
-		this.state.step = 0;
-		
-		this.onNext = this.onNext.bind(this);
-	}
+  next() {
+    const step = this.state.step;
+    if (step < this.props.steps) {
+      this.setState({
+        step: step + 1
+      });
+    }
+  }
 
-	render() {
-		return (
-			<div>
-				<h1>Wizard Component</h1>
-				<p>Step {this.state.step}/{this.steps}</p>
-				{ this.state.step < this.steps ?
-					<button type="button" onClick={this.onNext}>Next</button> :
-					'Congrtulations! You finished the wizard!'
-				}
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <h1>Wizard Component</h1>
+        {this.question ? (
+          <Step question={this.question} onSelect={this.onAnswered} />
+        ) : null}
+        {this.state.step >= this.props.steps ? (
+          <Result answers={this.state.answers} />
+        ) : null}
+      </div>
+    );
+  }
 }

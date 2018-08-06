@@ -1,26 +1,29 @@
-import webpack from 'webpack';
+import webpack from "webpack";
 
-export default function (config, env, helpers) {
+export default function(config, env, helpers) {
+  // assets env path
+  env.ASSETS = "./assets/";
 
-	// assets env path
-	env.ASSETS = './assets/';
+  if (env.production) {
+    // app is under /roadmap in prod
+    config.output.publicPath = "/roadmap";
 
-	if (env.production) {
+    // disable service worker
+    let { index } = helpers.getPluginsByName(
+      config,
+      "SWPrecacheWebpackPlugin"
+    )[0];
+    config.plugins.splice(index);
 
-		// app is under /roadmap in prod
-		config.output.publicPath = '/roadmap';
+    // disable js sourcemaps
+    let { plugin } = helpers.getPluginsByName(config, "UglifyJsPlugin")[0];
+    plugin.options.sourceMap = false;
+  }
 
-		// disable service worker
-		let { index } = helpers.getPluginsByName(config, 'SWPrecacheWebpackPlugin')[0];
-		config.plugins.splice(index);
-
-		// disable js sourcemaps
-		let { plugin } = helpers.getPluginsByName(config, 'UglifyJsPlugin')[0];
-		plugin.options.sourceMap = false;
-	}
-
-	// disable code-splitting
-	config.plugins.push(new webpack.optimize.LimitChunkCountPlugin({
-		maxChunks: 1
-	}));
+  // disable code-splitting
+  config.plugins.push(
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1
+    })
+  );
 }
